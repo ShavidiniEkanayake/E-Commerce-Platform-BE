@@ -56,7 +56,7 @@ const calcDiscount = (req,res,next)=>{
   }
 
   const getNewDiscount = (req,res,next)=>{
-    UserProductModel.find({product:req.query.product_id,userId:req.query.userId})
+    UserProductModel.find({product:req.query.product_id})
     .then((discount)=>{
       res.status(200).json({
         success: true,

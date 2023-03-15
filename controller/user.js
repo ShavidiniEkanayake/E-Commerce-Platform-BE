@@ -41,10 +41,11 @@ const addUser = (req, res, next)=>{
           payload: {}
         }
       );
-    }else{
+    }else if(password != "sefaadvsa"){
       res.status(400).json(
         {
-          message: 'Cannot add data right now!'
+          succuss: false,
+          message: 'Your password is incorrect'
         }
       );
     }
